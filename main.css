@@ -23,6 +23,7 @@ header h1 {
 }
 
 .container {
+    animation: appear 1.9s;
     display: inline-flexbox;
     border-left: rgba(0, 0, 0, 0.618);
     border-left-width: 14px;
@@ -32,7 +33,7 @@ header h1 {
     background-color: #aabad9;
     max-width: 960px;
     width: 100%;
-    height: 600px;
+    height: 700px;
     margin: 0 auto;
 
 }
@@ -42,21 +43,15 @@ header h1 {
 .box_form,
 .box_tab {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     justify-items: center;
     align-items: center;
 }
 
-form {
-    display: block;
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-    margin-bottom: 16px;
+.box_form{
+    margin: 30px 10px;
+    height: 100px;
 }
-
 
 .box_form input {
     border: none;
@@ -64,7 +59,7 @@ form {
     box-shadow: 0px 0px 3px black;
     border-radius: 4px;
     outline-style: none;
-    margin-inline: 5px;
+    margin-inline: 5px 10px;
 }
 
 .box_form button {
@@ -96,35 +91,102 @@ form {
 .box_tab{
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 table {
+    display: grid;
+    overflow-y: scroll;
     background-color: rgb(211, 189, 63);
     border: #000;
     border-radius: 5px;
-    max-width: 800px;
-    width: 550px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     font-family: "Edu NSW ACT Foundation", cursive;
 }
 
-table th {
+thead{
+    display: flex;
+    height: 100px;
+    justify-content: center;  
+}
+
+thead tr{
+    height: 100px;
+}
+
+thead th {
     color: white;
     font-weight: 600;
     text-shadow: 0px 0px 3px black;
-    font-size: 35px;
-    padding: 20px;
+    font-size: 50px;
+    margin-inline: 5% 10%;
+    padding: 10px 31px;
     text-decoration-color: rgb(0, 0, 0);
-    border-bottom: 1px solid black;
-
 }
 
+tbody{
+    display: inline-flexbox;
+    width: 100%;
+    height: 350px;
+}
 
 tbody td {
+    width: 400px;
     color: #000;
     font-weight: 600;
     font-size: 20px;
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     border-bottom: 1px solid black;
+}
+
+.mensagem_sucesso{
+    font-family: "Bungee", sans-serif;
+    background-color: green;
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke-width: 0.00005em;
+    -webkit-text-stroke-color: white;
+    display: none;
+}
+
+
+
+.mensagem_erro{
+    font-family: "Bungee", sans-serif;
+    background-color: rgb(195, 54, 54);
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    -webkit-text-stroke-width: 0.00005em;
+    -webkit-text-stroke-color: white;
+    display: none;
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 100;
+    }
+}
+
+::-webkit-scrollbar{
+    background-color: #1d1d1d;
+    width: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #5b5b5b;
+    border-radius: 5px;
 }

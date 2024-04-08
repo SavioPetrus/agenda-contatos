@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Contatos</title>
     <link rel="icon" href="assets/contato-telefone.svg" type="image/svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,11 @@
         </div>
         <div class="box_form">
             <form id="form_contato">
-                <input type="text" required placeholder="Nome do contato">
-                <input type="tel" required placeholder="Telefone">
+                <input type="text" id="nome_contato" placeholder="Nome do contato">
+                <input type="tel" id="telefone_contato" placeholder="Telefone">
                 <button type="submit">Salvar</button>
+                <p class="mensagem_erro">teste</p>
+                <p class="mensagem_sucesso"> teste</p>
             </form>
         </div>
         <div class="box_tab">
@@ -43,6 +45,7 @@
             </table>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
